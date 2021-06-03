@@ -67,7 +67,3 @@ func solution(_ numbers:[Int], _ hand:String) -> String {
     
     return result
 }
-
-let numbers = [0]
-let hand = "right"
-print(solution(numbers, hand))
