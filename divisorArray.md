@@ -1,4 +1,4 @@
-```
+```swift
 func divisorArray(_ n : Int) -> [Int] {
     var array = [Int]()
     let sqrtValue = Int(sqrt(Double(n)))
