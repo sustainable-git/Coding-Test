@@ -46,7 +46,7 @@ var name = "edkward"
 let wrongPosition = name.firstIndex(of: "k")
 name.remove(at: wrongPosition!) // name == edward
 name.removeFirst() // name == dward
-name.removeLast() // name = dwar
+name.removeLast() // name == dwar
 ```
 - Trimming
 ```swift
@@ -55,4 +55,9 @@ import Foundation // necessary
 var name = "(hermione)))))"
 name = name.trimmingCharacters(in: ["(",")"]) // in : CharacterSet
 // name == hermione
+```
+- Format
+```swift
+let num = 5
+print(String(format: "%02d", num)) // 05
 ```
