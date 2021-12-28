@@ -61,3 +61,14 @@ name = name.trimmingCharacters(in: ["(",")"]) // in : CharacterSet
 let num = 5
 print(String(format: "%02d", num)) // 05
 ```
+<br>
+
+### Regular Expression
+
+```swift
+func isMatched(id: String, pattern: String) -> Bool {
+     let regexString = "^" + pattern.replacingOccurrences(of: "*", with: "[a-zA-Z0-9]") + "$" // "^": start, "$": end
+     let regex = try? NSRegularExpression(pattern: regexString)
+     return regex?.firstMatch(in: id, options: [], range: NSRange(location: 0, length: id.count)) != nil
+}
+```
