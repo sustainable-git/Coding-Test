@@ -66,9 +66,9 @@ print(String(format: "%02d", num)) // 05
 ### Regular Expression
 
 ```swift
-func isMatched(id: String, pattern: String) -> Bool {
-     let regexString = "^" + pattern.replacingOccurrences(of: "*", with: "[a-zA-Z0-9]") + "$" // "^": start, "$": end
-     let regex = try? NSRegularExpression(pattern: regexString)
-     return regex?.firstMatch(in: id, options: [], range: NSRange(location: 0, length: id.count)) != nil
-}
+func isMatched(target: String, pattern: String) -> Bool {
+      let patternString = "^" + pattern.replacingOccurrences(of: "*", with: "[a-zA-Z0-9]") + "$" // "^": start, "$": end
+      let regex = try? NSRegularExpression(pattern: patternString)
+      return regex?.firstMatch(in: target, options: [], range: NSRange(location: 0, length: target.count)) != nil
+ }
 ```
